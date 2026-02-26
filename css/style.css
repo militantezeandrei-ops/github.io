@@ -1,0 +1,95 @@
+body {
+    background-color: #0F172A;
+    color: #F8FAFC;
+    overflow-x: hidden;
+}
+
+.gradient-text {
+    background: linear-gradient(135deg, #3B82F6 0%, #8B5CF6 50%, #06B6D4 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.glass {
+    background: rgba(30, 41, 59, 0.7);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.glass-hover:hover {
+    background: rgba(30, 41, 59, 0.9);
+    border-color: rgba(59, 130, 246, 0.5);
+    transform: translateY(-5px);
+    box-shadow: 0 20px 40px rgba(59, 130, 246, 0.2);
+}
+
+.project-card {
+    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.project-card:hover {
+    transform: translateY(-10px) scale(1.02);
+}
+
+.skill-bar {
+    transition: width 1.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.cursor-glow {
+    width: 400px;
+    height: 400px;
+    background: radial-gradient(circle, rgba(59, 130, 246, 0.15) 0%, rgba(139, 92, 246, 0.1) 40%, transparent 70%);
+    position: fixed;
+    pointer-events: none;
+    z-index: 0;
+    transform: translate(-50%, -50%);
+    transition: opacity 0.3s;
+}
+
+.nav-link {
+    position: relative;
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -4px;
+    left: 0;
+    background: linear-gradient(90deg, #3B82F6, #8B5CF6);
+    transition: width 0.3s;
+}
+
+.nav-link:hover::after {
+    width: 100%;
+}
+
+.reveal {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.8s cubic-bezier(0.5, 0, 0, 1);
+}
+
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.grid-pattern {
+    background-image: radial-gradient(rgba(59, 130, 246, 0.1) 1px, transparent 1px);
+    background-size: 50px 50px;
+}
+
+.tech-badge {
+    background: rgba(59, 130, 246, 0.1);
+    border: 1px solid rgba(59, 130, 246, 0.3);
+    transition: all 0.3s;
+}
+
+.tech-badge:hover {
+    background: rgba(59, 130, 246, 0.2);
+    border-color: rgba(59, 130, 246, 0.6);
+    transform: translateY(-2px);
+}
